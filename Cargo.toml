@@ -1,0 +1,29 @@
+[package]
+authors = ["kurbatxx <kurbatxx@gmail.com>"]
+edition = "2018"
+name = "cardgetter"
+version = "0.2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clipboard = "0.5.0"
+hex = "0.4.2"
+serde = "1.0.117"
+serde_derive = "1.0.117"
+serialport = "3.3.0"
+toml = "0.5.6"
+tray-item = "0.7.0"
+winrt-notification = "0.5.1"
+enigo = "0.0.14"
+
+[build-dependencies]
+windres = "0.2.2"
+
+
+[profile.release]
+strip = true
+opt-level = "s"
+lto = true
+panic = "abort"
+codegen-units = 1
